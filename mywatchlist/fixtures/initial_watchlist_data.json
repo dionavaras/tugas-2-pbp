@@ -1,0 +1,112 @@
+[
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 1,
+      "fields": {
+        "watched": true,
+        "title": "Inception",
+        "rating": 5,
+        "release_date": "2010-02-14",
+        "review": "Leonardo is awesome in this movie"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 2,
+      "fields": {
+        "watched": true,
+        "title": "La La Land",
+        "rating": 4,
+        "release_date": "2016-04-10",
+        "review": "The ending was not what i had expected but still good"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 3,
+      "fields": {
+        "watched": false,
+        "title": "The Martian",
+        "rating": 5,
+        "release_date": "2015-10-22",
+        "review": "Intense movie! Awesome cinematography"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 4,
+      "fields": {
+        "watched": true,
+        "title": "The Wolf of Wall Street",
+        "rating": 5,
+        "release_date": "2014-01-21",
+        "review": "Very fun to watch"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 5,
+      "fields": {
+        "watched": true,
+        "title": "The Shape of Water",
+        "rating": 3,
+        "release_date": "2018-03-29",
+        "review": "Very weird plot, uncomfortable to watch"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 6,
+      "fields": {
+        "watched": false,
+        "title": "The Social Network",
+        "rating": 5,
+        "release_date": "2010-11-03",
+        "review": "Another brilliant movie"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 7,
+      "fields": {
+        "watched": false,
+        "title": "Hugo",
+        "rating": 5,
+        "release_date": "2012-03-07",
+        "review": "Very intereseting classic movie"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 8,
+      "fields": {
+        "watched": true,
+        "title": "Hidden Figures",
+        "rating": 5,
+        "release_date": "2017-03-10",
+        "review": "Best real life story ever"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 9,
+      "fields": {
+        "watched": false,
+        "title": "Call Me by Your Name",
+        "rating": 5,
+        "release_date": "2017-11-24",
+        "review": "The best coming of age movie!"
+      }
+    },
+    {
+      "model": "mywatchlist.moviewatchlist",
+      "pk": 10,
+      "fields": {
+        "watched": true,
+        "title": "Shutter Island",
+        "rating": 4,
+        "release_date": "2010-03-03",
+        "review": "Psychology thriller at its best"
+      }
+    }
+  ]
