@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<style>
+    h1 {
+        color: blue;
+    }
+
+    h5, p, h1 {
+        text-align: center;
+    }
+
+    button {
+        display: block;
+        margin: 40px auto;
+        width: 10%;
+        padding: 10px;
+        font-size: 15px;
+        background: #d0d0d5;
+        border: 2px solid #3b3b4f;
+    }
+</style>
+
 <h1>Tugas 3 PBP</h1>
 
 <h5>Name: </h5>
@@ -9,8 +30,8 @@
 <h5>Student ID: </h5>
 <p>{{npm}}</p>
 
-<a href="/mywatchlist/html">html</a>
-<a href="/mywatchlist/json">json</a>
-<a href="/mywatchlist/xml">xml</a>
+<a href="/mywatchlist/html"><button>html</button></a>
+<a href="/mywatchlist/json"><button>json</button></a>
+<a href="/mywatchlist/xml"><button>xml</button></a>
 
 {% endblock content %}
