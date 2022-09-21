@@ -19,7 +19,7 @@ def show_watchlink(request):
         'name': 'Diona Varastika',
         'npm': '2106708255'
     }
-    return render(request, 'watchlink.html', context)
+    return render(request, "watchlink.html", context)
 
 def show_xml(request):
     data = MovieWatchlist.objects.all()
