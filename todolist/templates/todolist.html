@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>To Do List</title>
+{% endblock meta %}
+
+{% block content %}
+
+<style>
+    body {
+       background-image: url(https://wallpapercave.com/wp/wp8255146.jpg); 
+    }   
+
+    h1, h3, h2 {
+        color: white;
+        text-align: center;
+        font-family: cursive;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    table {
+    border-collapse: collapse;
+    background-color: #f8d8e6;
+    margin: auto;
+    
+    }
+
+    th {
+      background-color: #e94895;
+      text-align: center;
+    }
+
+    td {
+      text-align: left;
+    }
+
+    td, th {
+    border: 1px solid rgb(11, 9, 9);
+    padding: 0.5rem;
+    font-family: cursive;
+    font-size: smaller;
+    }
+
+    .button-logout {
+      margin: auto;
+      background-color: #a80d4b; /* Green */
+      border: 2px solid #111;
+      border-radius: 20px;
+      color: rgb(255, 255, 255);
+      padding: 10px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px
+    }
+
+    .button-logout:hover {
+      background-color: #ffffff; /* Green */
+      color: #a80d4b;
+    }
+
+/* CSS */
+.button-56 {
+  align-items: center;
+  margin: auto;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 20px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+</style>
+
+<body>
+<h1>&#128171To Do List&#128218</h1>
+<h3>Hi {{user}}!&#128075</h3>
+<h2>Your To Do List</h2>
+
+<table>
+    <tr>
+    <th>&#128197 Date</th>
+    <th>&#128204 Title</th>
+    <th>&#128196 Description</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for todo in list_todo %}
+        <tr>
+            <td>{{todo.date}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.description}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<a href="{% url 'todolist:show_newtask' %}"><button class="button-56" role="button">+ New Task</button></a>
+<br>
+<a href="{% url 'todolist:logout' %}"><button class="button-logout">Logout</button></a>
+</body>
+{% endblock content %}

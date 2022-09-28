@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block meta %}
+<title>Create New Task</title>
+{% endblock meta %} {% block content %}
+
+<style>
+  body {
+       background-image: url(https://wallpapercave.com/wp/wp8255146.jpg); 
+  } 
+
+  .login {
+        font-family: cursive;
+        color: white;
+        font-size: larger;
+        margin: auto;
+        display:block;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    input {
+      margin: auto;
+      background-color: #a80d4b; /* Green */
+      border: 2px solid #111;
+      border-radius: 20px;
+      color: rgb(255, 255, 255);
+      padding: 6px 20px;
+      text-align: left;
+      display: inline-block;
+      font-size: 16px
+    }
+
+    input:hover {
+      background-color: #ffffff; /* Green */
+      color: #a80d4b;
+    }
+</style>
+
+<body>
+<div class="login">
+<h1>Create New Task</h1>
+<form method="POST" action="">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>Task Title:</td>
+      <td>
+        <input type="text" name="title" placeholder="Add title"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Description:</td>
+      <td>
+        <input type="text" name="description" placeholder="Add description"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Create" /></td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+{% endblock content %}
