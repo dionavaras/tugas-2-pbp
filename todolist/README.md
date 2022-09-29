@@ -14,4 +14,36 @@ Ya, kita dapat membuat elemen `<form>` secara manual tanpa {{ form.as_table }}. 
   
 Saat user melakukan submisi melalui HTML form dengan mengeklik tombol submit, data yang telah diinput oleh user pada form akan dapat diakses dengan request POST. Lalu data tersebut akan dicek apakah sesuai atau tidak, jika valid maka akan disimpan pada database. Untuk dapat mengakses data yang telah disimpan, dapat menggunakan Models.objects.filter(user=request.user) sesuai dengan akun user. Lalu pada HTML akan dilakukan pemanggilan data melalui context pada views.py untuk menampilkan data.
   
-
+## Implementasi checklist
+  
+1. Pertama, membuat suatu aplikasi baru bernama todolist dengan menjalankan perintah `py manage.py startapp todolist` pada cmd
+2. Menambahkan path todolist dengan memasukkan `path('todolist/', include('todolist.urls')),` pada urls.py di project_django
+3. Membuat models.py dengan atribut sebagai berikut di folder todolist
+```bash
+  class TodolistModel(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    title = models.CharField(max_length=255)
+    description  = models.TextField()
+```
+4. Membuat fungsi register, show_todolist, login_user, show_newtask dan logout_user pada views.py folder todolist untuk membuat form registrasi, login, membuat task baru, halaman utama dan logout yang dihubungkan pada HTML. Membuat fungsi show_newtask dan show_todolist dengan login_required agar user perlu masuk ke akunnya untuk mengakses halaman. Pada halaman new task, user dapat memasukkan title dan description dari tugas. 
+5. Membuat halaman utama todolist yang memuat username, tombol New Task, tombol logout, dan tabel to do list dengan meloop data todo yang ada pada context  show_todolist untuk menampilkan data pada todolist.html. Tabel menggunakan `<table>` dan tombol menggunakan `button`
+6. Melakukan routing pada folder urls.py :
+```bash
+  urlpatterns = [
+    path('', show_todolist, name='show_todolist'),
+    path('register/', register, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('create-task/', show_newtask, name='show_newtask'),
+]
+```
+7. Melakukan deployment ke heroku dengan git add ., git commit, dan git push
+8. Membuat dua akun dan 3 dummy data yaitu:
+```bash
+Username : akunpertama
+Password : passwordakun1
+  
+Username : akunkedua
+Password : passwordakun2
+```
