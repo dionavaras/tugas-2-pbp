@@ -12,4 +12,6 @@ Ya, kita dapat membuat elemen `<form>` secara manual tanpa {{ form.as_table }}. 
   
 ## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
   
+Saat user melakukan submisi melalui HTML form dengan mengeklik tombol submit, data yang telah diinput oleh user pada form akan dapat diakses dengan request POST. Lalu data tersebut akan dicek apakah sesuai atau tidak, jika valid maka akan disimpan pada database. Untuk dapat mengakses data yang telah disimpan, dapat menggunakan Models.objects.filter(user=request.user) sesuai dengan akun user. Lalu pada HTML akan dilakukan pemanggilan data melalui context pada views.py untuk menampilkan data.
+  
 
