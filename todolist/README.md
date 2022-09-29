@@ -9,3 +9,7 @@ Django memiliki tag {% csrf_token %} yang diimplementasikan untuk menghindari se
 ## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
 
 Ya, kita dapat membuat elemen `<form>` secara manual tanpa {{ form.as_table }}. Caranya adalah dengan membuat file dulu seperti forms.py dan membuat `<table>` dan `<tr>` yang berisi elemen seperti text dan option yang dapat diisi oleh user dengan `<input>`. Jika posisinya masih belum rapih, dapat diatur dengan CSS. Lalu terakhir membuat elemen submit.
+  
+## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
+  
+
