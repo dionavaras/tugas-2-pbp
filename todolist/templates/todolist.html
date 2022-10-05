@@ -9,7 +9,14 @@
 <style>
     body {
        background-image: url(https://wallpapercave.com/wp/wp8255146.jpg); 
+       padding: 20px 10px;
     }   
+
+    .card{
+      /* margin: auto; */
+      margin-bottom: 15pt;
+      margin-inline: 20px auto;
+    }
 
     h1, h3, h2 {
         color: white;
@@ -125,24 +132,32 @@
 <h3>Hi {{user}}!&#128075</h3>
 <h2>Your To Do List</h2>
 
-<table>
+<!-- <table>
     <tr>
     <th>&#128197 Date</th>
     <th>&#128204 Title</th>
     <th>&#128196 Description</th>
-    </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% for todo in list_todo %}
-        <tr>
-            <td>{{todo.date}}</td>
-            <td>{{todo.title}}</td>
-            <td>{{todo.description}}</td>
-        </tr>
-    {% endfor %}
-</table>
+    </tr> -->
+
+<div class="row">
+{% for todo in list_todo %}
+<div class="card col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{todo.title}}</h5>
+    <p class="card-text">{{todo.date}}</p>
+    <p class="card-text">{{todo.description}}</p>
+  </div>
+</div>
+{% endfor %}
+</div>
+<!-- </table> -->
 <br>
 <a href="{% url 'todolist:show_newtask' %}"><button class="button-56" role="button">+ New Task</button></a>
 <br>
 <a href="{% url 'todolist:logout' %}"><button class="button-logout">Logout</button></a>
 </body>
 {% endblock content %}
+
+
+<!-- Referensi button :
+https://getcssscan.com/css-buttons-examples -->
