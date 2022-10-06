@@ -17,6 +17,16 @@ Pros : Karena kode CSS berada dalam dokumen terpisah, file HTML akan memiliki st
 Cons : Tampilan mungkin tidak dirender dengan benar hingga CSS eksternal dimuat. Mengunggah atau menautkan ke beberapa file CSS dapat meningkatkan waktu pengunduhan situs.
 
 ## Tag HTML 5
-
+Tag <div> pada HTML digunakan untuk mengelompokkan elemen atau bermacam-macam tag agar menjadi suatu grup. Tag div ini juga sering digunakan untuk mendefinisikan ID atau Class dari CSS. Tag <body> biasanya digunakan untuk membuka dan menutup semua isian yang terdapat di dalam dokumen HTML, seperti text, grafik, link, dan lain-lain. Tag <br> adalah untuk membuat baris baru.
+<button>	Specifies a push button
+<b>	Specifies bold text
+<head>	Specifies information about the document
+<h1> to <h6>	Specifies header 1 to header 6
+<input>	Specifies an input field
+<label>	Specifies a label for a form control
+<p>	Specifies a paragraph
+<textarea>	Specifies a text area
+<thead>	Specifies a table header
+Tag <tr> (tabel row) untuk membuat baris. Tag <td> (table data) untuk membuat sel. Tag <th> (table head) untuk membuat judul pada header.
 
 ## Tipe CSS Selector
