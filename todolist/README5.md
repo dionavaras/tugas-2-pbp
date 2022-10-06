@@ -17,16 +17,16 @@ Pros : Karena kode CSS berada dalam dokumen terpisah, file HTML akan memiliki st
 Cons : Tampilan mungkin tidak dirender dengan benar hingga CSS eksternal dimuat. Mengunggah atau menautkan ke beberapa file CSS dapat meningkatkan waktu pengunduhan situs.
 
 ## Tag HTML 5
-Tag `<div>` pada HTML digunakan untuk mengelompokkan elemen atau bermacam-macam tag agar menjadi suatu grup. Tag div ini juga sering digunakan untuk mendefinisikan ID atau Class dari CSS. Tag `<body>` biasanya digunakan untuk membuka dan menutup semua isian yang terdapat di dalam dokumen HTML, seperti text, grafik, link, dan lain-lain. Tag `<br>` adalah untuk membuat baris baru.
-`<button>`	Specifies a push button
-<b>	Specifies bold text
-<head>	Specifies information about the document
-<h1> to <h6>	Specifies header 1 to header 6
-<input>	Specifies an input field
-<label>	Specifies a label for a form control
-<p>	Specifies a paragraph
-<textarea>	Specifies a text area
-<thead>	Specifies a table header
+Tag `<div>` pada HTML digunakan untuk mengelompokkan elemen atau bermacam-macam tag agar menjadi suatu grup. Tag div ini juga sering digunakan untuk mendefinisikan ID atau Class dari CSS. Tag `<body>` biasanya digunakan untuk membuka dan menutup semua isian yang terdapat di dalam dokumen HTML, seperti text, grafik, link, dan lain-lain. Tag `<br>` adalah untuk membuat baris baru. Tag `<button>` digunakan untuk membuat button. Tag `<b>`	digunakkan untuk membuat tulisan menjadi bold. Tag `<head>` tugasnya adalah memberikan informasi tentang dokumen. Tag `<h1>` sampai `<h6>`	digunakan untuk header level1  sampai 6.
+Tag `<input>`	merupakan tag pada HTML yang digunakan untuk menciptakan bidang formulir yang memungkinkan pengguna dalam memasukkan entry data.
+Tag `<label>`	sebagai pelengkap keterangan untuk beberapa objek form seperti radio atau checkbox. 
+Tag `<p>`	untuk membuat paragraf.
+Tag `<textarea>`	untuk membuat textarea.
+Tag `<thead>`	untuk membuat table header.
 Tag <tr> (tabel row) untuk membuat baris. Tag <td> (table data) untuk membuat sel. Tag <th> (table head) untuk membuat judul pada header.
 
 ## Tipe CSS Selector
+Tipe CSS Selector pertama yang saya ketahui adalah `element selector` yang memilih elemen HTML berdasarkan nama elemen. Yang kedua adalah `id selector` yang menggunakan atribut id dari elemen HTML untuk memilih elemen tertentu. Untuk memilih elemen dengan id tertentu, tulis karakter hash (#), diikuti dengan id elemen. Yang ketiga adalah `class selector` yang memilih elemen HTML dengan atribut kelas tertentu. Untuk memilih elemen dengan kelas tertentu, tulis karakter titik (.), diikuti dengan nama kelas. Lalu ada `universal selector` memilih semua elemen HTML pada halaman. `Grouping selector` memilih semua elemen HTML dengan definisi style yang sama. Untuk group selector, pisahkan setiap pemilih dengan koma.
+  
+## Implementasi
+Saya mengkostumisasi template HTML yang telah dibuat pada Tugas 4 dengan menggunakan CSS dan Bootstrap. CSS saya gunakan untuk membuat background, button, dan mengkostumisasi tulisan dan input, saya menggunakan margin, text-align, dan justify content untuk menengahkan elemen. Menggunakan font-family, text-shadow, dan color untuk mengkostumisasi tampilan tulisan. Saya jg menggunakan CSS untuk membuat tampilan hover pada card. Saya menggunakan bootstrap untuk membuat card. Langkah pertama yang saya lakukan dengan bootstrap adalah menambahkan link `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">` dan `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>` pada head html di base.html. Saya membuat card dengan menambahkan class card pada html. Untuk membuat website menjadi responsive, bootstrap telah menyediakan sifat responsive bawaaannya.
