@@ -7,7 +7,7 @@ from django.urls import path
 from todolist.views import register, show_todolist #sesuaikan dengan nama fungsi yang dibuat
 from todolist.views import login_user #sesuaikan dengan nama fungsi yang dibuat
 from todolist.views import logout_user #sesuaikan dengan nama fungsi yang dibuat
-from todolist.views import show_newtask
+from todolist.views import show_newtask, show_json, add_task
 
 app_name = 'todolist'
 
@@ -17,4 +17,6 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
     path('create-task/', show_newtask, name='show_newtask'),
+    path('json/', show_json, name='show_json'),
+    path('add/', add_task, name='add_task'),
 ]

@@ -9,6 +9,10 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 import datetime
 from django.urls import reverse
+from django.http import HttpResponse,JsonResponse
+from django.core import serializers
+
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -62,3 +66,24 @@ def show_newtask(request):
         response = HttpResponseRedirect(reverse("todolist:show_todolist")) 
         return response
     return render(request, "createtask.html")
+
+def show_json(request):
+    model_todo = TodolistModel.objects.filter(user = request.user)
+    return HttpResponse(serializers.serialize("json", model_todo), content_type="application/json")
+
+@csrf_exempt
+def add_task(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        todo = TodolistModel.objects.create(title = title, description = description, date = datetime.date.today(), user = request.user)
+
+        result = {
+            'fields':{
+                'title':todo.title,
+                'date':todo.date,
+                'description':todo.description,
+            },
+            'pk':todo.pk
+        }
+        return JsonResponse(result)
